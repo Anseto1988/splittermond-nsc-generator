@@ -31,6 +31,6 @@
     ],
     "socket": false,
     "url": "https://github.com/Anseto1988/splittermond-nsc-generator",
-    "manifest": "https://github.com/Anseto1988/splittermond-nsc-generator/blob/master/modulo.json",
+    "manifest": "https://github.com/Anseto1988/splittermond-nsc-generator/blob/master/module.json",
     "download": "https://github.com/Anseto1988/splittermond-nsc-generator/archive/refs/tags/latest.zip"
   }
