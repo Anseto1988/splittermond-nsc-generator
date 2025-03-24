@@ -1,0 +1,31 @@
+<form>
+    <div class="form-group">
+      <label>Stufe</label>
+      <div class="form-fields">
+        <input type="number" name="level" value="{{defaultLevel}}" min="1" max="15">
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label>Typ</label>
+      <div class="form-fields">
+        <select name="type">
+          {{#each types}}
+            <option value="{{this}}" {{#if (eq ../defaultType this)}}selected{{/if}}>{{this}}</option>
+          {{/each}}
+        </select>
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label>Quellenbände</label>
+      <div class="splittermond-sourcebooks">
+        {{#each sourcebooks}}
+          <div class="sourcebook-item">
+            <input type="checkbox" id="sourcebook-{{@index}}" name="sourcebooks.{{name}}" {{#if enabled}}checked{{/if}}>
+            <label for="sourcebook-{{@index}}">{{name}}</label>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+  </form>

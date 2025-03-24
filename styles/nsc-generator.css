@@ -1,0 +1,34 @@
+.splittermond-nsc-btn {
+    background: linear-gradient(to bottom, #4f7942, #3a5a30);
+    color: white;
+    border: 1px solid #2c3e50;
+    border-radius: 3px;
+    padding: 5px 10px;
+    margin-left: 5px;
+  }
+  
+  .splittermond-nsc-btn:hover {
+    background: linear-gradient(to bottom, #3a5a30, #2c4523);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .splittermond-sourcebooks {
+    display: flex;
+    flex-direction: column;
+    max-height: 150px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin-top: 5px;
+    border-radius: 3px;
+  }
+  
+  .sourcebook-item {
+    margin: 2px 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .sourcebook-item input[type="checkbox"] {
+    margin-right: 5px;
+  }

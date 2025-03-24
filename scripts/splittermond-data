@@ -1,0 +1,435 @@
+// Splittermond-Daten für den NSC Generator
+
+export class SplittermondData {
+  constructor() {
+    this.sourcebooks = {
+      'Grundregelwerk': true,
+      'Bestiarum': true,
+      'Wege der Magie': false,
+      'Wege des Glaubens': false,
+      'Wege der Helden': false
+    };
+    
+    this.nscTypes = [
+      'Standard',
+      'Elite',
+      'Boss',
+      'Helfer',
+      'Statist'
+    ];
+    
+    this.attributeNames = [
+      'strength',    // Stärke
+      'agility',     // Beweglichkeit
+      'intuition',   // Intuition
+      'constitution', // Konstitution
+      'mystic',      // Mystik
+      'mind',        // Verstand
+      'charisma',    // Charisma
+      'willpower'    // Willenskraft
+    ];
+    
+    // NPC-Templates basierend auf den verschiedenen Typen
+    this.templates = {
+      'Standard': {
+        attributes: {
+          'strength': { initial: 3, advances: 0 },
+          'agility': { initial: 3, advances: 0 },
+          'intuition': { initial: 3, advances: 0 },
+          'constitution': { initial: 3, advances: 0 },
+          'mystic': { initial: 3, advances: 0 },
+          'mind': { initial: 3, advances: 0 },
+          'charisma': { initial: 3, advances: 0 },
+          'willpower': { initial: 3, advances: 0 }
+        },
+        skillLevel: 6,
+        lp: 10,
+        mp: 5
+      },
+      'Elite': {
+        attributes: {
+          'strength': { initial: 4, advances: 0 },
+          'agility': { initial: 4, advances: 0 },
+          'intuition': { initial: 4, advances: 0 },
+          'constitution': { initial: 4, advances: 0 },
+          'mystic': { initial: 4, advances: 0 },
+          'mind': { initial: 4, advances: 0 },
+          'charisma': { initial: 4, advances: 0 },
+          'willpower': { initial: 4, advances: 0 }
+        },
+        skillLevel: 8,
+        lp: 15,
+        mp: 8
+      },
+      'Boss': {
+        attributes: {
+          'strength': { initial: 5, advances: 0 },
+          'agility': { initial: 5, advances: 0 },
+          'intuition': { initial: 5, advances: 0 },
+          'constitution': { initial: 5, advances: 0 },
+          'mystic': { initial: 5, advances: 0 },
+          'mind': { initial: 5, advances: 0 },
+          'charisma': { initial: 5, advances: 0 },
+          'willpower': { initial: 5, advances: 0 }
+        },
+        skillLevel: 10,
+        lp: 20,
+        mp: 10
+      },
+      'Helfer': {
+        attributes: {
+          'strength': { initial: 2, advances: 0 },
+          'agility': { initial: 2, advances: 0 },
+          'intuition': { initial: 2, advances: 0 },
+          'constitution': { initial: 2, advances: 0 },
+          'mystic': { initial: 2, advances: 0 },
+          'mind': { initial: 2, advances: 0 },
+          'charisma': { initial: 2, advances: 0 },
+          'willpower': { initial: 2, advances: 0 }
+        },
+        skillLevel: 4,
+        lp: 8,
+        mp: 3
+      },
+      'Statist': {
+        attributes: {
+          'strength': { initial: 1, advances: 0 },
+          'agility': { initial: 1, advances: 0 },
+          'intuition': { initial: 1, advances: 0 },
+          'constitution': { initial: 1, advances: 0 },
+          'mystic': { initial: 1, advances: 0 },
+          'mind': { initial: 1, advances: 0 },
+          'charisma': { initial: 1, advances: 0 },
+          'willpower': { initial: 1, advances: 0 }
+        },
+        skillLevel: 2,
+        lp: 5,
+        mp: 1
+      }
+    };
+    
+    // Beispielhafte NSC-Typen und ihre Fähigkeiten
+    // Dies würde mit den tatsächlichen Daten aus den Splittermond-Quellenbänden gefüllt werden
+    this.npcArchetypes = {
+      'Kämpfer': {
+        primaryAttributes: ['strength', 'constitution'],
+        secondaryAttributes: ['agility', 'willpower'],
+        primarySkills: ['melee', 'blades', 'athletics', 'endurance'],
+        features: ['Kampfreflexe', 'Waffenmeister'],
+        attacks: [
+          {
+            name: "Schwert",
+            weaponType: "Einhandwaffe",
+            value: 8,
+            damage: "2W6+3",
+            features: ["Wuchtschlag"]
+          }
+        ]
+      },
+      'Magier': {
+        primaryAttributes: ['mystic', 'mind'],
+        secondaryAttributes: ['willpower', 'intuition'],
+        primarySkills: ['controlmagic', 'arcanelore', 'empathy', 'perception'],
+        features: ['Begabung: Magie', 'Fokussiert'],
+        attacks: [
+          {
+            name: "Arkane Entladung",
+            weaponType: "Zauber",
+            value: 8,
+            damage: "2W6",
+            features: ["Betäubend"]
+          }
+        ]
+      },
+      'Waldläufer': {
+        primaryAttributes: ['agility', 'intuition'],
+        secondaryAttributes: ['constitution', 'mind'],
+        primarySkills: ['longrange', 'hunting', 'survival', 'perception'],
+        features: ['Tarnung: Wald', 'Schnellschuss'],
+        attacks: [
+          {
+            name: "Bogen",
+            weaponType: "Fernkampfwaffe",
+            value: 8,
+            damage: "2W6+1",
+            features: ["Durchdringend"]
+          }
+        ]
+      }
+    };
+    
+    // NSC-Namen (würde mit tatsächlichen Splittermond-Namen gefüllt werden)
+    this.npcNames = {
+      'männlich': ["Alrik", "Brandur", "Corvin", "Darian", "Eldric", "Finn", "Gareth", "Hagen", "Irian", "Jorvin"],
+      'weiblich': ["Alina", "Brida", "Celine", "Dalia", "Elara", "Fenja", "Greta", "Hilda", "Ilara", "Jorana"]
+    };
+  }
+  
+  // Getter für die verfügbaren NSC-Typen
+  getNscTypes() {
+    return this.nscTypes;
+  }
+  
+  // Getter für die verfügbaren Quellenbände
+  getSourcebooks() {
+    return Object.keys(this.sourcebooks).map(book => {
+      return { name: book, enabled: this.sourcebooks[book] };
+    });
+  }
+  
+  // NSC-Daten generieren basierend auf Einstellungen
+  generateNscData(options) {
+    const level = options.level || 1;
+    const type = options.type || 'Standard';
+    const gender = Math.random() > 0.5 ? 'männlich' : 'weiblich';
+    
+    // Wähle einen zufälligen Archetyp
+    const archetypeKeys = Object.keys(this.npcArchetypes);
+    const archetype = this.npcArchetypes[archetypeKeys[Math.floor(Math.random() * archetypeKeys.length)]];
+    
+    // Generiere einen Namen
+    const name = this.generateName(gender);
+    
+    // Basisdaten basierend auf dem Typ
+    const templateData = this.templates[type];
+    
+    // Attribute modifizieren basierend auf Archetyp und Stufe
+    const attributes = this.generateAttributes(templateData, archetype, level);
+    
+    // Fertigkeiten generieren
+    const skills = this.generateSkills(templateData, archetype, level);
+    
+    // Abgeleitete Attribute berechnen
+    const derivedAttributes = this.calculateDerivedAttributes(attributes, level, type);
+    
+    // Angriffe generieren
+    const attacks = this.generateAttacks(archetype, level);
+    
+    // Fähigkeiten generieren
+    const features = this.generateFeatures(archetype, level);
+    
+    // Das komplette NSC-Daten-Objekt zusammenstellen
+    const nscData = {
+      name: name,
+      img: this.getRandomPortrait(gender),
+      system: {
+        attributes: attributes,
+        skills: skills,
+        derivedAttributes: derivedAttributes,
+        biography: {
+          biography: `Ein ${type}-NSC vom Typ ${archetypeKeys[Math.floor(Math.random() * archetypeKeys.length)]}.`
+        },
+        health: {
+          value: derivedAttributes.healthpoints.value,
+          max: derivedAttributes.healthpoints.value
+        },
+        focus: {
+          value: derivedAttributes.focuspoints.value,
+          max: derivedAttributes.focuspoints.value
+        },
+        sex: gender === 'männlich' ? 'male' : 'female',
+        type: archetypeKeys[Math.floor(Math.random() * archetypeKeys.length)],
+        level: level.toString(),
+        damageReduction: {
+          value: Math.floor(level / 3)
+        }
+      },
+      attacks: attacks,
+      features: features
+    };
+    
+    return nscData;
+  }
+  
+  // Zufälligen Namen generieren
+  generateName(gender) {
+    const names = this.npcNames[gender];
+    return names[Math.floor(Math.random() * names.length)];
+  }
+  
+  // Zufälliges Portrait bekommen
+  getRandomPortrait(gender) {
+    // Hier würden wir idealerweise auf eine Sammlung von Portraits zugreifen
+    // Fürs Erste verwenden wir einfach das Standard-Portrait
+    return gender === 'männlich' ? 'icons/svg/mystery-man.svg' : 'icons/svg/mystery-man.svg';
+  }
+  
+  // Attribute generieren basierend auf Vorlage, Archetyp und Stufe
+  generateAttributes(templateData, archetype, level) {
+    const attributes = {};
+    
+    for (let attr of this.attributeNames) {
+      let value = templateData.attributes[attr].initial;
+      
+      // Bonus für primäre und sekundäre Attribute
+      if (archetype.primaryAttributes.includes(attr)) {
+        value += 2;
+      } else if (archetype.secondaryAttributes.includes(attr)) {
+        value += 1;
+      }
+      
+      // Stufenbonus
+      value += Math.floor(level / 3);
+      
+      // Maximalwert prüfen (in Splittermond üblicherweise nicht über 10)
+      value = Math.min(value, 10);
+      
+      attributes[attr] = {
+        species: 0,
+        initial: value,
+        advances: 0
+      };
+    }
+    
+    return attributes;
+  }
+  
+  // Fertigkeiten generieren basierend auf Vorlage, Archetyp und Stufe
+  generateSkills(templateData, archetype, level) {
+    const skills = {};
+    const baseSkillValue = templateData.skillLevel + Math.floor(level / 2);
+    
+    // Alle Fertigkeiten mit Grundwert initialisieren
+    for (let skill of Object.keys(game.system.model.Actor.npc.skills)) {
+      skills[skill] = {
+        points: 0,
+        value: 0
+      };
+      
+      // Bonus für primäre Fertigkeiten
+      if (archetype.primarySkills.includes(skill)) {
+        skills[skill].points = baseSkillValue + 2;
+      } else {
+        // Zufällige Werte für andere Fertigkeiten
+        skills[skill].points = Math.max(0, baseSkillValue - 4 + Math.floor(Math.random() * 5));
+      }
+    }
+    
+    return skills;
+  }
+  
+  // Abgeleitete Attribute berechnen
+  calculateDerivedAttributes(attributes, level, type) {
+    const typeMultiplier = {
+      'Standard': 1,
+      'Elite': 1.5,
+      'Boss': 2,
+      'Helfer': 0.75,
+      'Statist': 0.5
+    };
+    
+    // Grundwerte aus Attributen berechnen
+    const strength = attributes.strength.initial;
+    const agility = attributes.agility.initial;
+    const constitution = attributes.constitution.initial;
+    const intuition = attributes.intuition.initial;
+    const mystic = attributes.mystic.initial;
+    const mind = attributes.mind.initial;
+    const willpower = attributes.willpower.initial;
+    
+    // Abgeleitete Attribute nach Splittermond-Regeln
+    return {
+      size: {
+        value: 5 // Standardgröße für humanoide NSCs
+      },
+      speed: {
+        value: 8 + Math.floor(agility / 2) // Geschwindigkeit basierend auf Beweglichkeit
+      },
+      initiative: {
+        value: Math.floor((agility + intuition) / 2) // Initiative aus Beweglichkeit und Intuition
+      },
+      healthpoints: {
+        value: Math.floor((10 + constitution * 2 + strength) * typeMultiplier[type] * (1 + level * 0.1))
+      },
+      focuspoints: {
+        value: Math.floor((mystic + willpower) * typeMultiplier[type] * (1 + level * 0.1))
+      },
+      defense: {
+        value: 8 + Math.floor(agility / 2) // Verteidigung aus Beweglichkeit
+      },
+      bodyresist: {
+        value: 5 + Math.floor(constitution / 2) // Körperlicher Widerstand aus Konstitution
+      },
+      mindresist: {
+        value: 5 + Math.floor(willpower / 2) // Geistiger Widerstand aus Willenskraft
+      }
+    };
+  }
+  
+  // Angriffe generieren
+  generateAttacks(archetype, level) {
+    if (!archetype.attacks) return [];
+    
+    return archetype.attacks.map(attack => {
+      // Angriffswert skaliert mit Stufe
+      const value = attack.value + Math.floor(level / 2);
+      
+      // Item-Daten für einen NSC-Angriff erstellen
+      return {
+        name: attack.name,
+        type: "npcattack",
+        img: this.getAttackIcon(attack.weaponType),
+        system: {
+          description: `Ein ${attack.weaponType} Angriff.`,
+          attacks: [{
+            name: attack.name,
+            skill: value,
+            feature: attack.features.join(", "),
+            damage: this.scaleDamage(attack.damage, level),
+            range: attack.weaponType === "Fernkampfwaffe" ? 20 : 0
+          }]
+        }
+      };
+    });
+  }
+  
+  // Schaden skalieren basierend auf Stufe
+  scaleDamage(damageFormula, level) {
+    // Einfache Skalierung: Bei höheren Stufen mehr Schaden
+    if (level <= 3) return damageFormula;
+    if (level <= 6) return damageFormula + "+1";
+    if (level <= 9) return damageFormula + "+2";
+    return damageFormula + "+3";
+  }
+  
+  // Icon für Angriffe bekommen
+  getAttackIcon(weaponType) {
+    switch (weaponType) {
+      case "Einhandwaffe": return "icons/svg/sword.svg";
+      case "Zweihandwaffe": return "icons/svg/greatsword.svg";
+      case "Fernkampfwaffe": return "icons/svg/bow.svg";
+      case "Zauber": return "icons/svg/explosion.svg";
+      default: return "icons/svg/combat.svg";
+    }
+  }
+  
+  // Fähigkeiten generieren
+  generateFeatures(archetype, level) {
+    if (!archetype.features) return [];
+    
+    // Anzahl der Fähigkeiten basierend auf Stufe
+    const featureCount = Math.min(archetype.features.length, 1 + Math.floor(level / 3));
+    
+    // Wähle zufällige Fähigkeiten aus
+    const selectedFeatures = [];
+    const availableFeatures = [...archetype.features];
+    
+    for (let i = 0; i < featureCount; i++) {
+      if (availableFeatures.length === 0) break;
+      
+      const randomIndex = Math.floor(Math.random() * availableFeatures.length);
+      const feature = availableFeatures.splice(randomIndex, 1)[0];
+      
+      selectedFeatures.push({
+        name: feature,
+        type: "npcfeature",
+        img: "icons/svg/upgrade.svg",
+        system: {
+          description: `NSC-Fähigkeit: ${feature}`
+        }
+      });
+    }
+    
+    return selectedFeatures;
+  }
+}
